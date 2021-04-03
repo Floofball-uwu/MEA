@@ -1,8 +1,8 @@
-package sonnicon.modtemplate;
+package farmerthanos.mea;
 
 import mindustry.mod.Mod;
 
-public class ModTemplate extends Mod{
+public class MEA extends Mod{
 
     @Override
     public void init(){

@@ -1,12 +1,12 @@
 {
-  "name": "modtemplate",
-  "displayName": "Template",
-  "author": "[#8738ff[]]Sonnicon[[]]",
-  "description": "Gradle jar Mindustry mod template",
-  "version": "0",
-  "main": "sonnicon.modtemplate.ModTemplate",
-  "minGameVersion": "105",
+  "name": "mea",
+  "displayName": "MEA",
+  "author": "Farmer Thanos",
+  "description": "Mindustry Event Announcer\n It will bring you either to insanity, victory, or both.",
+  "version": "0.1",
+  "main": "farmerthanos.mea.MEA",
+  "minGameVersion": "126",
   "dependencies": [],
-  "hidden": false,
+  "hidden": true,
   "java": true
 }
