@@ -1,7 +1,7 @@
 {
   "name": "mea",
   "displayName": "MEA",
-  "author": "Farmer Thanos",
+  "author": "Farmer Thanos (Thank you megacatswoop#7269 for 'attack detection' code)",
   "description": "Mindustry Event Announcer\n It will bring you either to insanity, victory, or both.",
   "version": "0.1",
   "main": "farmerthanos.mea.MEA",

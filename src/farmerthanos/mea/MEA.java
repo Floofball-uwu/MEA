@@ -21,5 +21,6 @@ public class MEA extends Mod{
     @Override
     public void loadContent(){
         new Announcements().load();
+        new Calls().load();
     }
 }
