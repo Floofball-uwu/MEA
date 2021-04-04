@@ -4,13 +4,15 @@ import arc.Core;
 import arc.assets.AssetDescriptor;
 import arc.assets.loaders.MusicLoader;
 import arc.audio.Music;
+import arc.util.Log;
 import mindustry.Vars;
 
 public class Announcements {
     protected static Music loadMusic(String musicName) {
+        Log.info("announcement: ohno");
         if (!Vars.headless) {
-            String name = "music/" + musicName;
-            String path = name + ".ogg";
+            String name = "announcements/" + musicName;
+            String path = Vars.tree.get(name + ".mp3").exists() ? name + ".mp3" : name + ".ogg";
 
             Music music = new Music();
 

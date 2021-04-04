@@ -21,7 +21,6 @@ public class MEA extends Mod{
 
     @Override
     public void init(){
-        new Announcements().load();
         new Calls().load();
         Log.info("MEA online");
     }
