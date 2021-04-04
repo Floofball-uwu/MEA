@@ -7,10 +7,10 @@ import arc.audio.Music;
 import mindustry.Vars;
 
 public class Announcements {
-    protected static Music loadMusic(String announcementName) {
+    protected static Music loadMusic(String musicName) {
         if (!Vars.headless) {
-            String name = "announcements/" + announcementName;
-            String path = name + ".ogg";
+            String name = "music/" + musicName;
+            String path = Vars.tree.get(name + ".ogg").exists() ? name + ".ogg" : name + ".mp3";
 
             Music music = new Music();
 
@@ -23,9 +23,9 @@ public class Announcements {
         }
     }
 
-    protected static Music disposeMusic(String announcementName) {
+    protected static Music disposeMusic(String musicName) {
         if (!Vars.headless) {
-            String name = "announcements/" + announcementName;
+            String name = "music/" + musicName;
             String path = name + ".ogg";
 
             if (Core.assets.isLoaded(path, Music.class)) {
