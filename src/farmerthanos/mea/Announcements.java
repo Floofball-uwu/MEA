@@ -10,7 +10,7 @@ public class Announcements {
     protected static Music loadMusic(String musicName) {
         if (!Vars.headless) {
             String name = "music/" + musicName;
-            String path = Vars.tree.get(name + ".ogg").exists() ? name + ".ogg" : name + ".mp3";
+            String path = name + ".ogg";
 
             Music music = new Music();
 
@@ -23,21 +23,9 @@ public class Announcements {
         }
     }
 
-    protected static Music disposeMusic(String musicName) {
-        if (!Vars.headless) {
-            String name = "music/" + musicName;
-            String path = name + ".ogg";
-
-            if (Core.assets.isLoaded(path, Music.class)) {
-                Core.assets.unload(path);
-            }
-        }
-
-        return null;
-    }
-
     public static Music
-    BaseUnderAttack, CoreUnderAttack, LowPower, MonoUnderAttack, Resources, SectorCaptured, UnitLost;
+            BaseUnderAttack, CoreUnderAttack, LowPower,
+            MonoUnderAttack, Resources, SectorCaptured, UnitLost;
 
     public static void load() {
 
@@ -48,16 +36,5 @@ public class Announcements {
         Resources = loadMusic("Resources");
         SectorCaptured = loadMusic("SectorCaptured");
         UnitLost = loadMusic("UnitLost");
-    }
-
-    public static void dispose() {
-
-        BaseUnderAttack = disposeMusic("BaseUnderAttack");
-        CoreUnderAttack = disposeMusic("CoreUnderAttack");
-        LowPower = disposeMusic("LowPower");
-        MonoUnderAttack = disposeMusic("MonoUnderAttack");
-        Resources = disposeMusic("Resources");
-        SectorCaptured = disposeMusic("SectorCaptured");
-        UnitLost = disposeMusic("UnitLost");
     }
 }

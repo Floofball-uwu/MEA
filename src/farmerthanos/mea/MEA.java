@@ -5,16 +5,11 @@ import arc.util.Log;
 import mindustry.Vars;
 import mindustry.game.EventType;
 import mindustry.mod.Mod;
+import mindustry.mod.Mods;
 
 public class MEA extends Mod{
 
     public MEA() {
-        Log.info("Did this load with 'hidden: true'?");
-
-        //Evil 'hidden: true' bypass to load stuff
-        loadContent();
-
-        Announcements.load();
         if(Vars.headless) {
             Events.on(EventType.FileTreeInitEvent.class, e -> {
                 Announcements.load();
@@ -25,7 +20,7 @@ public class MEA extends Mod{
     }
 
     @Override
-    public void loadContent(){
+    public void init(){
         new Announcements().load();
         new Calls().load();
         Log.info("MEA online");

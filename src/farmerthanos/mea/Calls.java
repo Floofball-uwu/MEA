@@ -23,10 +23,8 @@ public class Calls {
                     public void get(Bullet bullet) {
                         if (bullet.team != build.team) {
                             Log.info("Base is under attack.");
-                            Announcements.loadMusic("BaseUnderAttack");
                             Announcements.BaseUnderAttack.play();
-                            Announcements.disposeMusic("BaseUnderAttack");
-                            delay(1);
+                            //delay(1);
                             stop = true;
                         }
                     }
