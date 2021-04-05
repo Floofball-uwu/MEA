@@ -9,7 +9,6 @@ import mindustry.Vars;
 
 public class Announcements {
     protected static Music loadMusic(String musicName) {
-        Log.info("announcement: ohno");
         if (!Vars.headless) {
             String name = "announcements/" + musicName;
             String path = Vars.tree.get(name + ".mp3").exists() ? name + ".mp3" : name + ".ogg";
