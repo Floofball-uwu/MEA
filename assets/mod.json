@@ -3,7 +3,7 @@
   "displayName": "MEA",
   "author": "[#AA60FF]Farmer Thanos [](Thank you megacatswoop#7269 for 'attack detection' code)",
   "description": "Mindustry Event Announcer\n It will bring you either to insanity, victory, or both.",
-  "version": "0.1",
+  "version": "0.2",
   "main": "farmerthanos.mea.MEA",
   "minGameVersion": "126",
   "dependencies": [],
